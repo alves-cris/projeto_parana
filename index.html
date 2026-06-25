@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu Interativo: Paraná em Telas, Trilhas e Tramas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Paraná em Telas, Trilhas e Tramas</h1>
+            <p class="subtitle">Museu Virtual Interativo</p>
+        </div>
+    </header>
+
+    <section class="intro-section">
+        <div class="containerBox">
+            <h2>Questão Motriz</h2>
+            <p class="quest-motriz">
+                "Da cidade ao campo e do litoral às fronteiras, como os fluxos de pessoas, o desenvolvimento econômico e as manifestações artísticas ao longo da história valorizam a sua região?"
+            </p>
+            <p class="instruction">Explore as salas do museu abaixo para descobrir as respostas através da nossa história.</p>
+        </div>
+    </section>
+
+    <main class="museum-gallery">
+        <div class="gallery-grid">
+            <button class="exhibit-card" onclick="openExhibit('raizes-negras')">
+                <h3>Raízes Negras e a Identidade Paranaense</h3>
+                <span class="view-btn">Entrar na Sala</span>
+            </button>
+            
+            <button class="exhibit-card" onclick="openExhibit('diaspora-europeia')">
+                <h3>A Diáspora Europeia e Asiática</h3>
+                <span class="view-btn">Entrar na Sala</span>
+            </button>
+
+            <button class="exhibit-card" onclick="openExhibit('conquista-norte-oeste')">
+                <h3>A Conquista do Norte e Oeste: Migrações Internas</h3>
+                <span class="view-btn">Entrar na Sala</span>
+            </button>
+
+            <button class="exhibit-card" onclick="openExhibit('fronteiras-chamas')">
+                <h3>Fronteiras em Chamas: Conflitos e Território</h3>
+                <span class="view-btn">Entrar na Sala</span>
+            </button>
+
+            <button class="exhibit-card" onclick="openExhibit('motores-parana')">
+                <h3>Os Motores do Paraná: Mate, Madeira e Café</h3>
+                <span class="view-btn">Entrar na Sala</span>
+            </button>
+        </div>
+    </main>
+
+    <div id="exhibit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeExhibit()">&times;</span>
+            <h2 id="modal-title">Título da Sala</h2>
+            <hr class="divider">
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Projeto Integrador - Paraná em Telas, Trilhas e Tramas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
