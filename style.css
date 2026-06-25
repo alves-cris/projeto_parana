@@ -1,0 +1,198 @@
+/* Configurações Gerais e Cores de Época */
+:root {
+    --bg-pergaminho: #f4eae1;
+    --bg-card: #ebd9c8;
+    --text-principal: #2c1a04;
+    --pinhao-escuro: #4a2c11;
+    --verde-pinheiro: #1e351a;
+    --borda-ouro: #b58d3d;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: var(--bg-pergaminho);
+    color: var(--text-principal);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--pinhao-escuro);
+    color: var(--bg-pergaminho);
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px double var(--borda-ouro);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+header .subtitle {
+    margin: 5px 0 0 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--borda-ouro);
+}
+
+/* Seção da Questão Motriz */
+.intro-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.containerBox {
+    background-color: var(--bg-card);
+    border: 3px double var(--pinhao-escuro);
+    padding: 30px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+.intro-section h2 {
+    color: var(--verde-pinheiro);
+    margin-top: 0;
+}
+
+.quest-motriz {
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--pinhao-escuro);
+}
+
+.instruction {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: #666;
+}
+
+/* Galeria do Museu (Cards) */
+.museum-gallery {
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.exhibit-card {
+    background-color: var(--bg-card);
+    border: 2px solid var(--pinhao-escuro);
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 180px;
+    font-family: inherit;
+}
+
+.exhibit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(74, 44, 17, 0.2);
+    border-color: var(--borda-ouro);
+}
+
+.exhibit-card h3 {
+    margin: 0 0 20px 0;
+    color: var(--pinhao-escuro);
+    font-size: 1.2rem;
+}
+
+.view-btn {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--verde-pinheiro);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 2px;
+    transition: background 0.2s;
+}
+
+.exhibit-card:hover .view-btn {
+    background-color: var(--borda-ouro);
+}
+
+/* O Modal (Janela de Exposição) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); 
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background-color: var(--bg-pergaminho);
+    margin: 5% auto; 
+    padding: 30px;
+    border: 10px double var(--pinhao-escuro);
+    width: 80%; 
+    max-width: 700px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.5);
+    position: relative;
+    animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+    color: var(--pinhao-escuro);
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: var(--borda-ouro);
+}
+
+#modal-title {
+    color: var(--verde-pinheiro);
+    margin-top: 0;
+    padding-right: 30px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--borda-ouro), rgba(0, 0, 0, 0));
+    margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--pinhao-escuro);
+    color: #a39282;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    border-top: 3px solid var(--borda-ouro);
+}
